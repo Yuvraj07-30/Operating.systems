@@ -1,0 +1,44 @@
+Experiment 10
+
+Aim:
+To write a C program that creates a child process, waits for the termination of the child process, and displays its Process ID (PID).
+
+Software Requirements
+
+• Operating System: Linux / Unix-based system
+• Compiler: GCC (GNU Compiler Collection)
+• Text Editor: Nano (or any preferred text editor)
+• Header Files: <stdio.h>, <stdlib.h>, <unistd.h>, <sys/wait.h>
+
+Theory
+
+• Process: A process is a program in execution. Each process running on a system is assigned a unique identifier known as a Process ID (PID).
+• fork() System Call: Creates a new child process by duplicating the calling (parent) process.
+	• Returns 0 to the child process.
+	• Returns the child's PID to the parent process.
+	• Returns -1 if the process creation fails.
+• wait() System Call: Blocks the parent process until one of its child processes terminates. Upon termination, it returns the PID of the ended child process.
+• exit() Function: Terminated the calling process immediately.
+• PID (Process ID): A unique numerical identifier used by the operating system to track a process while it exists.
+Procedure
+
+1. Open Ubuntu VirtualBox and start the Terminal.
+2. Create a C program using the Nano text editor:bash
+nano exp10.c
+Use code with caution.
+3. Write the code inside the Nano text editor.
+4. Save the program using the following shortcuts:
+	• Press Ctrl + O
+	• Press Enter
+	• Press Ctrl + X
+5. Compile the program using GCC:bash
+gcc exp10.c -o exp10
+Use code with caution.
+6. Execute the program:bash
+./exp10
+Use code with caution.
+7. Observe the output.
+
+Result
+
+The C program was successfully compiled and executed in Ubuntu. A child process was created using the fork() system call. The parent process waited for the termination of the child using wait() and displayed the PID of the terminated child process.
